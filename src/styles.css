@@ -1,0 +1,190 @@
+/* Add application styles & imports to this file! */
+
+body {
+  background: rgb(236, 246, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.trolley {
+  height: 200px;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 1px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  margin-bottom: 1rem;
+}
+
+.tour-trolleys {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.packing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2.2rem;
+}
+
+.packing h1 {
+  font-size: 30px;
+  margin-top: -1rem;
+}
+
+.packing h4 {
+  margin-top: -14px;
+  color: grey;
+  font-size: 12px;
+}
+
+.batches {
+  display: flex;
+  justify-items: center;
+  margin-bottom: auto;
+}
+
+.nLabelCount {
+  background-color: rgb(0, 153, 255);
+  color: white;
+  margin: auto;
+  padding: 1px 15px;
+  border-radius: 20px;
+}
+
+.ntraySize {
+  color: white;
+  font-weight: 900;
+  font-size: 20px;
+  margin-top: -2.2rem;
+  margin-left: 1.65rem;
+  transform: skewy(30deg);
+}
+
+.sum-not-complete {
+  background-color: darkred;
+  color: white;
+  margin: auto;
+  padding: 10px 20px;
+  border-radius: 3px;
+}
+
+.sum-complete {
+  background-color: green;
+  color: white;
+  margin: auto;
+  padding: 10px 20px;
+  border-radius: 3px;
+}
+
+.totalSum {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+.low-opacity {
+  opacity: 0.5;
+}
+
+.tourInfo {
+  display: flex;
+  justify-content: center;
+}
+
+.trolley-icon {
+  width: 25px;
+  height: 25px;
+  margin-left: 5px;
+}
+
+.trolley-serial {
+  background-color: rgb(0, 153, 255);
+  color: white;
+  margin: auto auto 0.2rem auto;
+  padding: 0px 5px;
+  border-radius: 20px;
+}
+
+.tour-trolleys {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+.tour-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 5px;
+  margin-bottom: 0.1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    width: clamp(200px, 50%, 600px);
+    background: rgb(236, 246, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  .tourInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 7rem;
+  }
+
+  .trolley {
+    height: auto;
+    width: clamp(400px, 50%, 600px);
+    border-radius: 5px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 1px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px;
+  }
+
+  .packing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.2rem;
+  }
+
+  .batches {
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    margin-bottom: auto;
+  }
+
+  .ntraySize {
+    color: white;
+    font-weight: 900;
+    font-size: 20px;
+    margin-top: -50px;
+    margin-left: -2rem;
+    transform: skewy(30deg);
+  }
+
+  .totalSum {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    margin: 3rem;
+  }
+}

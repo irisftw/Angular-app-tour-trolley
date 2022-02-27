@@ -1,0 +1,26 @@
+<div
+  *ngIf="!isTourLoading && !isTrolleysLoading; else other_content"
+  class="animate-bottom"
+>
+  <div class="Tour">
+    <div class="tourInfo">
+      <div class="tour-name">
+        <span>{{ tour?.tourName }}</span>
+      </div>
+      <div class="tour-trolleys" *ngFor="let trolley of tour?.trolleys">
+        <span class="trolley-serial">{{ trolley.serial }}</span>
+        <div
+          class="trolley-icon"
+          [ngClass]="!getTrolley(trolley.trolleyId) ? 'low-opacity' : ''"
+        ></div>
+      </div>
+    </div>
+    <div *ngFor="let trolley of tour?.trolleys">
+      <app-trolley [trolley]="getTrolley(trolley.trolleyId)"></app-trolley>
+    </div>
+  </div>
+</div>
+
+<ng-template #other_content>
+  <div class="loader"></div>
+</ng-template>

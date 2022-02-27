@@ -1,0 +1,23 @@
+<div *ngIf="trolley">
+  <h2>
+    {{ trolley.trolleyName }}
+  </h2>
+  <div class="trolley">
+    <div class="packing">
+      <h1>{{ trolley.cpackinglist }}</h1>
+      <h4>{{ trolley.ctext }}</h4>
+    </div>
+    <div class="batches">
+      <div class="packing" *ngFor="let prod of trolley.prodLabels">
+        <span class="nLabelCount">{{ prod.nlabelCount }}</span>
+        <div class="image" [ngClass]="getTrolleyState(prod)"></div>
+        <span class="ntraySize">{{ prod.ntraySize }}</span>
+      </div>
+    </div>
+    <div class="totalSum">
+      <span [ngClass]="isSumComplete() ? 'sum-complete' : 'sum-not-complete'"
+        >{{ getTrolleySum() }}x</span
+      >
+    </div>
+  </div>
+</div>
